@@ -19,27 +19,27 @@
       }
       & .front {
         transform: translateZ(50px);
-        background: linear-gradient(45deg, #ff0000, #bdd846);
+        background: linear-gradient(45deg, #666f88, #aaaaaa);
       }
       & .back {
         transform: translateZ(-50px);
-        background: linear-gradient(45deg, #0095ff, #46d8d1);
+        background: linear-gradient(45deg, #666f88, #aaaaaa);
       }
       & .top {
         transform: rotateX(90deg) translateZ(50px);
-        background: linear-gradient(45deg, #ff00aa, #4657d8);
+        background: linear-gradient(45deg, #666f88, #aaaaaa);
       }
       & .bottom {
         transform: rotateX(90deg) translateZ(-50px);
-        background: linear-gradient(45deg, #00ff33, #d87446);
+        background: linear-gradient(45deg, #666f88, #aaaaaa);
       }
       & .left {
         transform: rotateY(90deg) translateZ(50px);
-        background: linear-gradient(45deg, #ffa600, #d87746);
+        background: linear-gradient(45deg, #666f88, #aaaaaa);
       }
       & .right {
         transform: rotateY(90deg) translateZ(-50px);
-        background: linear-gradient(45deg, #55ff00, #4661d8);
+        background: linear-gradient(45deg, #666f88, #aaaaaa);
       }
     }
   }

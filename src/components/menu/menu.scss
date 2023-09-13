@@ -1,3 +1,4 @@
+// Estilos generales CSS
 body {
   margin: 0;
   padding: 0;
@@ -13,31 +14,31 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(143, 141, 134);
+  background-color: #031B29;
   padding: 10px 20px;
-  
+
   ul {
     padding: 0;
     display: flex;
     list-style: none;
     align-items: center;
     margin-right: auto;
-    
+
     li {
       margin-right: 20px;
-      
+
       a {
         text-decoration: none;
         font-size: 17px;
         font-weight: 400;
-        color: #000;
+        color: white;
         padding: 5px 10px;
         transition: background-color 0.3s;
-        
+
         &:hover {
-          color: rgb(67, 67, 216);
+          color: rgb(140, 140, 214);
         }
-        
+
         &:active {
           color: #2e00fc;
           font-weight: 700;
@@ -45,21 +46,21 @@ body {
       }
     }
   }
-  
+
   img {
     max-width: 70px;
     height: auto;
     margin-right: 3%;
   }
-  
+
   .menu-toggle {
     display: none;
   }
-  
+
   .avatar-container {
     display: flex;
     align-items: center;
-    
+
     .avatar {
       max-width: 70px;
       height: auto;
@@ -68,25 +69,24 @@ body {
       margin-left: 20px;
     }
   }
-  
+
   .content {
     padding-left: 80px;
     padding-right: 40px;
-    
+
     img[src="../assets/images/Logos_UAM-08.png"] {
       max-width: 70px;
       height: auto;
       margin-right: 3%;
     }
   }
-  
+
   @media (max-width: 530px) {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    
-    
+
     #menu-list.show-menu {
       display: flex;
       flex-direction: column;
@@ -97,11 +97,16 @@ body {
       padding: 10px 20px;
       z-index: 1;
     }
-    
+
+    .slidePic{
+      width: auto;
+      height: 250px;
+    }
+
     .uamLogo {
       display: none;
     }
-    
+
     .menu-toggle {
       background: none;
       border: none;
@@ -109,11 +114,11 @@ body {
       color: #000;
       display: block;
     }
-    
+
     img.hide-logo {
       display: none;
     }
-    
+
     #menu-list {
       display: none;
       top: 60px;
@@ -122,21 +127,21 @@ body {
       padding: 10px 20px;
       z-index: 1;
       width: 100%;
-      
+
       li {
         text-align: center;
-        
+
         a {
           font-family: Arial, Helvetica, sans-serif;
           font-weight: bold;
-          
+
           &:hover {
             color: blue;
             background-color: none;
           }
         }
       }
-      
+
       &.show-menu {
         display: list-item;
         margin-top: 8%;
@@ -147,29 +152,63 @@ body {
     }
   }
 }
+
 /* Estilo para la sección Flexbox */
 #flex {
-background-color: rgba(255, 255, 0, 0.644); /* Color de fondo para Flexbox */
-color: white; /* Color del texto en la sección */
-padding: 20px; /* Espaciado interno */
-height: 620px;
+  background-color: rgb(240, 232, 232); /* Color de fondo para Flexbox */
+  color: white; /* Color del texto en la sección */
+  padding: 20px; /* Espaciado interno */
+  height: 620px;
 }
 
 /* Estilo para la sección Products */
 #products {
-background-color: rgba(0, 0, 255, 0.596); /* Color de fondo para Products */
-color: white; /* Color del texto en la sección */
-padding: 20px; /* Espaciado interno */
-height: 620px;
+  background-color: rgb(240, 232, 232); /* Color de fondo para Products */
+  color: white; /* Color del texto en la sección */
+  padding: 20px; /* Espaciado interno */
+  height: 620px;
 }
 
 /* Estilo para la sección Contact */
 #contact {
-background-color: rgba(255, 0, 0, 0.671); /* Color de fondo para Contact */
-color: white; /* Color del texto en la sección */
-padding: 20px; /* Espaciado interno */
-height: 620px;
+  background-color: rgb(240, 232, 232); /* Color de fondo para Contact */
+  color: white; /* Color del texto en la sección */
+  padding: 20px; /* Espaciado interno */
+  height: 620px;
 }
+
+/* Estilo para el slide */
+.slick-slide {
+  img {
+    margin: auto;
+  }
+}
+
+.slick-prev {
+  left: 275px;
+  z-index: 2;
+}
+
+.slick-next {
+  right: 275px;
+  z-index: 2;
+}
+
+/* Estilo para el botón activo de los puntos de navegación del slide */
+li.slick-active {
+  > button::before {
+    color: rgb(2, 2, 2) !important; /* Reemplaza "red" con tu color deseado */
+  }
+}
+
+.slick-prev:before, .slick-next:before {
+  font-size: 30px;
+  position: sticky;
+  color: grey;
+}
+
+
+/* Estilo para la sección de iconos */
 .icon-section {
   position: fixed;
   left: 0;
@@ -182,6 +221,7 @@ height: 620px;
   padding: 10px;
   margin-left: 10px;
   border-radius: 10%;
+  z-index: 3;
 
   a {
     text-decoration: none;
@@ -189,7 +229,7 @@ height: 620px;
     margin-bottom: 15px;
     margin-top: 5px;
     color: #ffffff8e;
-    :hover{
+    :hover {
       transform: scale(1.1);
       transition: transform 0.3s ease;
       color: #000;
@@ -200,8 +240,8 @@ height: 620px;
     font-size: 24px;
   }
 
-  .iconlist{
-    :active{
+  .iconlist {
+    :active {
       color: black;
     }
   }
