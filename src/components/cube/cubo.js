@@ -3,6 +3,7 @@ import './cubo.scss'; // Importa los estilos de SCSS
 import youtube from '../../assets/images/youtube-168-svgrepo-com.svg'
 import facebook from '../../assets/images/facebook-svgrepo-com.svg'
 import whatsapp from '../../assets/images/whatsapp-svgrepo-com.svg'
+import { Link } from 'react-router-dom';
 function CubeReact() {
   const cubeRef = useRef(null);
   const optionsContainerRef = useRef(null);
@@ -37,9 +38,8 @@ function CubeReact() {
   };
 
   /* Función para ver páginas */
-  const handleOptionClick = (page) => {
-    console.log('Di click en el cubo');
-    window.location.href = `../pages/${page}.html`;
+  const handleOptionClick = () => {
+    const option1Element = option1Ref.current;
   };
 
   return (
@@ -53,16 +53,9 @@ function CubeReact() {
         <div className="left"></div>
       </div>
       <div className="optionsContainer" id="options" ref={optionsContainerRef}>
-        <div className="cube1" id="option1" onClick={() => handleOptionClick('twitter')} ref={option1Ref}>
+        <div className="cube1" id="option1" onClick={() => handleOptionClick('facebook')} ref={option1Ref}>
           <div className="front">
-          <a
-            href="https://www.tiktok.com/"
-            rel="noreferrer"
-            target="_blank"
-            className="transition text-grey hover:hover:text-blue-500"
-          >
           <img src={facebook} className="footer__icon-img-large-whatsapp" />
-        </a>
           </div>
           <div className="back"></div>
           <div className="top"></div>

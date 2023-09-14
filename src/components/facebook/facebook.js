@@ -1,8 +1,7 @@
 import React from 'react';
-import '../styles/menu.scss';
-import '../styles/contact.scss';
+import './facebook.scss';
 
-function ContactPage() {
+function FacebookPage() {
   return (
     <div className="container">
       <div className="menu">
@@ -11,7 +10,7 @@ function ContactPage() {
         <ul id="menu-list">
           <li><a href="./flex">Flexbox</a></li>
           <li><a href="./products">Products</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#">facebook</a></li>
         </ul>
         <div className="avatar-container">
           <img src="./assets/images/avatar.png" className="avatar" alt="Foto de perfil" />
@@ -63,4 +62,4 @@ function ContactPage() {
   );
 }
 
-export default ContactPage;
+export default FacebookPage;

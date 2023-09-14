@@ -155,7 +155,7 @@ body {
 
 /* Estilo para la sección Flexbox */
 #flex {
-background-color: #A8F1F7; /* Color de fondo para Flexbox */
+background: linear-gradient(180deg,#031B29, #4b4b4b); /* Color de fondo para Flexbox */
 color: white; /* Color del texto en la sección */
 padding: 20px; /* Espaciado interno */
 height: 620px;
@@ -163,7 +163,7 @@ height: 620px;
 
 /* Estilo para la sección Products */
 #products {
-background-color: #12C0CF; /* Color de fondo para Products */
+background: linear-gradient(180deg,#4b4b4b, #868585); /* Color de fondo para Products */
 color: white; /* Color del texto en la sección */
 padding: 20px; /* Espaciado interno */
 height: 620px;
@@ -171,7 +171,7 @@ height: 620px;
 
 /* Estilo para la sección Contact */
 #contact {
-background-color: #10A5B2; /* Color de fondo para Contact */
+background: linear-gradient(180deg,#868585, #c9af54); /* Color de fondo para Contact */
 color: white; /* Color del texto en la sección */
 padding: 20px; /* Espaciado interno */
 height: 620px;

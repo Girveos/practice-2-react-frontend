@@ -1,15 +1,15 @@
 import React from 'react';
 import '../styles/menu.scss';
-import '../styles/flex.scss';
+import '../styles/whatsapp.scss';
 
-function FlexPage() {
+function WhatsappPage() {
   return (
     <div className="container">
       <div className="menu">
         <img className="uamLogo" src="../assets/images/Logos_UAM-08.png" alt="Logo UAM" />
         <button id="menu-toggle" className="menu-toggle">☰</button>
         <ul id="menu-list">
-          <li><a href="#">Flexbox</a></li>
+          <li><a href="#">whatsapp</a></li>
           <li><a href="./products">Products</a></li>
           <li><a href="./contact">Contact</a></li>
         </ul>
@@ -18,17 +18,18 @@ function FlexPage() {
         </div>
       </div>
       <div className="content">
-        <div className="flex-item1"></div>
+        <h1>Juliana y jeromino</h1>
+        <div className="whatsapp-item1"></div>
 
         <div className="container2">
-          <div className="flex-item2"></div>
-          <div className="flex-item3"></div>
+          <div className="whatsapp-item2"></div>
+          <div className="whatsapp-item3"></div>
         </div>
 
         <div className="container3">
-          <div className="flex-item4"></div>
-          <div className="flex-item5"></div>
-          <div className="flex-item6"></div>
+          <div className="whatsapp-item4"></div>
+          <div className="whatsapp-item5"></div>
+          <div className="whatsapp-item6"></div>
         </div>
 
         <div className="containerIn">
@@ -57,4 +58,4 @@ function FlexPage() {
   );
 }
 
-export default FlexPage;
+export default WhatsappPage;
