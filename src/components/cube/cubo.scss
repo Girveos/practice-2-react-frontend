@@ -1,48 +1,48 @@
 .loader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    & .cube {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  & .cube {
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    animation: spin 8s infinite linear;
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    & div {
+      position: absolute;
       width: 100px;
       height: 100px;
-      transform-style: preserve-3d;
-      animation: spin 8s infinite linear;
-      position: fixed;
-      bottom: 100px;
-      right: 100px;
-      & div {
-        position: absolute;
-        width: 100px;
-        height: 100px;
-        opacity: 0.8;
-      }
-      & .front {
-        transform: translateZ(50px);
-        background: linear-gradient(45deg, #ff0000, #bdd846);
-      }
-      & .back {
-        transform: translateZ(-50px);
-        background: linear-gradient(45deg, #0095ff, #46d8d1);
-      }
-      & .top {
-        transform: rotateX(90deg) translateZ(50px);
-        background: linear-gradient(45deg, #ff00aa, #4657d8);
-      }
-      & .bottom {
-        transform: rotateX(90deg) translateZ(-50px);
-        background: linear-gradient(45deg, #00ff33, #d87446);
-      }
-      & .left {
-        transform: rotateY(90deg) translateZ(50px);
-        background: linear-gradient(45deg, #ffa600, #d87746);
-      }
-      & .right {
-        transform: rotateY(90deg) translateZ(-50px);
-        background: linear-gradient(45deg, #55ff00, #4661d8);
-      }
+      opacity: 0.8;
+    }
+    & .front {
+      transform: translateZ(50px);
+      background: linear-gradient(45deg, #666f88, #aaaaaa);
+    }
+    & .back {
+      transform: translateZ(-50px);
+      background: linear-gradient(45deg, #666f88, #aaaaaa);
+    }
+    & .top {
+      transform: rotateX(90deg) translateZ(50px);
+      background: linear-gradient(45deg, #666f88, #aaaaaa);
+    }
+    & .bottom {
+      transform: rotateX(90deg) translateZ(-50px);
+      background: linear-gradient(45deg, #666f88, #aaaaaa);
+    }
+    & .left {
+      transform: rotateY(90deg) translateZ(50px);
+      background: linear-gradient(45deg, #666f88, #aaaaaa);
+    }
+    & .right {
+      transform: rotateY(90deg) translateZ(-50px);
+      background: linear-gradient(45deg, #666f88, #aaaaaa);
     }
   }
+}
   
   .optionsContainer{
     display:none;
@@ -67,27 +67,27 @@
       }
       & .front {
         transform: translateZ(50px);
-        background: linear-gradient(45deg,#55ff00, #4661d8);
+        background: linear-gradient(45deg,#2c64d3, #898F9C);
       }
       & .back {
         transform: translateZ(-50px);
-        background: linear-gradient(45deg,#55ff00, #4661d8);
+        background: linear-gradient(45deg,#2c64d3, #898F9C);
       }
       & .top {
         transform: rotateX(90deg) translateZ(50px);
-        background: linear-gradient(45deg,#55ff00, #4661d8);
+        background: linear-gradient(45deg,#2c64d3, #898F9C);
       }
       & .bottom {
         transform: rotateX(90deg) translateZ(-50px);
-        background: linear-gradient(45deg,#55ff00, #4661d8);
+        background: linear-gradient(45deg,#2c64d3, #898F9C);
       }
       & .left {
         transform: rotateY(90deg) translateZ(50px);
-        background: linear-gradient(45deg,#55ff00, #4661d8);
+        background: linear-gradient(45deg,#2c64d3, #898F9C);
       }
       & .right {
         transform: rotateY(90deg) translateZ(-50px);
-        background: linear-gradient(45deg,#55ff00, #4661d8);
+        background: linear-gradient(45deg,#2c64d3, #898F9C);
       }
     }
     & .cube2 {
@@ -107,27 +107,27 @@
       }
       & .front {
         transform: translateZ(50px);
-        background: linear-gradient(45deg,#ff00aac4, #4657d8b9);
+        background: linear-gradient(45deg,#25D366, #128C7E);
       }
       & .back {
         transform: translateZ(-50px);
-        background: linear-gradient(45deg,#ff00aac4, #4657d8b9);
+        background: linear-gradient(45deg,#25D366, #128C7E);
       }
       & .top {
         transform: rotateX(90deg) translateZ(50px);
-        background: linear-gradient(45deg,#ff00aac4, #4657d8b9);
+        background: linear-gradient(45deg,#25D366, #128C7E);
       }
       & .bottom {
         transform: rotateX(90deg) translateZ(-50px);
-        background: linear-gradient(45deg,#ff00aac4, #4657d8b9);
+        background: linear-gradient(45deg,#25D366, #128C7E);
       }
       & .left {
         transform: rotateY(90deg) translateZ(50px);
-        background: linear-gradient(45deg,#ff00aac4, #4657d8b9);
+        background: linear-gradient(45deg,#25D366, #128C7E);
       }
       & .right {
         transform: rotateY(90deg) translateZ(-50px);
-        background: linear-gradient(45deg,#ff00aac4, #4657d8b9);
+        background: linear-gradient(45deg,#25D366, #128C7E);
       }
     }
     & .cube3 {
@@ -147,27 +147,27 @@
       }
       & .front {
         transform: translateZ(50px);
-        background: linear-gradient(45deg,#013a9183, #1df0e2a9);
+        background: linear-gradient(45deg,#FF0000, #fc6262);
       }
       & .back {
         transform: translateZ(-50px);
-        background: linear-gradient(45deg,#013a9183, #1df0e2a9);
+        background: linear-gradient(45deg,#FF0000, #fc6262);
       }
       & .top {
         transform: rotateX(90deg) translateZ(50px);
-        background: linear-gradient(45deg,#013a9183, #1df0e2a9);
+        background: linear-gradient(45deg,#FF0000, #fc6262);
       }
       & .bottom {
         transform: rotateX(90deg) translateZ(-50px);
-        background: linear-gradient(45deg,#013a9183, #1df0e2a9);
+        background: linear-gradient(45deg,#FF0000, #fc6262);
       }
       & .left {
         transform: rotateY(90deg) translateZ(50px);
-        background: linear-gradient(45deg,#013a9183, #1df0e2a9);
+        background: linear-gradient(45deg,#FF0000, #fc6262);
       }
       & .right {
         transform: rotateY(90deg) translateZ(-50px);
-        background: linear-gradient(45deg,#013a9183, #1df0e2a9);
+        background: linear-gradient(45deg,#FF0000, #fc6262);
       }
     }
   }

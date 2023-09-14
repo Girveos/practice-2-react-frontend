@@ -13,7 +13,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(143, 141, 134);
+  background-color:#031B29;
   padding: 10px 20px;
   
   ul {
@@ -30,12 +30,12 @@ body {
         text-decoration: none;
         font-size: 17px;
         font-weight: 400;
-        color: #000;
+        color: white;
         padding: 5px 10px;
         transition: background-color 0.3s;
         
         &:hover {
-          color: rgb(67, 67, 216);
+          color: rgb(140, 140, 214);
         }
         
         &:active {
@@ -149,7 +149,7 @@ body {
 }
 /* Estilo para la sección Flexbox */
 #flex {
-background-color: rgba(255, 255, 0, 0.644); /* Color de fondo para Flexbox */
+background-color: #A8F1F7; /* Color de fondo para Flexbox */
 color: white; /* Color del texto en la sección */
 padding: 20px; /* Espaciado interno */
 height: 620px;
@@ -157,7 +157,7 @@ height: 620px;
 
 /* Estilo para la sección Products */
 #products {
-background-color: rgba(0, 0, 255, 0.596); /* Color de fondo para Products */
+background-color: #12C0CF; /* Color de fondo para Products */
 color: white; /* Color del texto en la sección */
 padding: 20px; /* Espaciado interno */
 height: 620px;
@@ -165,7 +165,7 @@ height: 620px;
 
 /* Estilo para la sección Contact */
 #contact {
-background-color: rgba(255, 0, 0, 0.671); /* Color de fondo para Contact */
+background-color: #10A5B2; /* Color de fondo para Contact */
 color: white; /* Color del texto en la sección */
 padding: 20px; /* Espaciado interno */
 height: 620px;
