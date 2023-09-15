@@ -3,11 +3,13 @@ import './youtube.scss';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import maluma from "../../assets/images/maluma.gif";
-import maluma1 from "../../assets/images/Maluma1.gif";
-import eladio from "../../assets/images/eladio.jpg";
+import nicki from "../../assets/images/nicki.gif";
+import peso from "../../assets/images/peso.gif";
+import romeo from "../../assets/images/romeo.gif";
+
 
 function YoutubePage() {
+
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -15,19 +17,22 @@ function YoutubePage() {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+
   return (
-    <div className="content" id="flex">
+    <div className="container">
+      <div className="content">
         <Slider {...sliderSettings}>
           <div>
-            <img src={maluma} class="slidePic" />
+          <img src={nicki} class="slidePic" />
           </div>
           <div>
-          <img src={maluma1} class="slidePic"/>
+          <img src={peso} class="slidePic"/>
           </div>
           <div>
-          <img src={eladio} class="slidePic"/>
+          <img src={romeo} class="slidePic"/>
           </div>
         </Slider>
+      </div>
       </div>
   );
 }

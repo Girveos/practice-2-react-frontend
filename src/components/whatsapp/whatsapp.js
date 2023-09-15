@@ -1,61 +1,40 @@
 import React from 'react';
-import '../styles/menu.scss';
-import '../styles/whatsapp.scss';
+import './whatsapp.scss';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import don from "../../assets/images/don.gif";
+import eladio from "../../assets/images/eladio.gif";
+import emilia from "../../assets/images/emilia.gif";
 
-function WhatsappPage() {
+
+function WhatsAppPage() {
+
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   return (
     <div className="container">
-      <div className="menu">
-        <img className="uamLogo" src="../assets/images/Logos_UAM-08.png" alt="Logo UAM" />
-        <button id="menu-toggle" className="menu-toggle">☰</button>
-        <ul id="menu-list">
-          <li><a href="#">whatsapp</a></li>
-          <li><a href="./products">Products</a></li>
-          <li><a href="./contact">Contact</a></li>
-        </ul>
-        <div className="avatar-container">
-          <img src="../assets/images/avatar.png" className="avatar" alt="Foto de perfil" />
-        </div>
-      </div>
       <div className="content">
-        <h1>Juliana y jeromino</h1>
-        <div className="whatsapp-item1"></div>
-
-        <div className="container2">
-          <div className="whatsapp-item2"></div>
-          <div className="whatsapp-item3"></div>
-        </div>
-
-        <div className="container3">
-          <div className="whatsapp-item4"></div>
-          <div className="whatsapp-item5"></div>
-          <div className="whatsapp-item6"></div>
-        </div>
-
-        <div className="containerIn">
-          <div className="containerIn1">
-            <div className="Colum"></div>
+        <Slider {...sliderSettings}>
+          <div>
+          <img src={emilia} class="slidePic" />
           </div>
-
-          <div className="containerIn2">
-            <div className="top"></div>
-
-            <div className="midcontainer">
-              <div className="mid1"></div>
-              <div className="mid2"></div>
-            </div>
-
-            <div className="footer">
-              <div className="foot1"></div>
-              <div className="foot2"></div>
-              <div className="foot3"></div>
-            </div>
+          <div>
+          <img src={eladio} class="slidePic"/>
           </div>
-        </div>
+          <div>
+          <img src={don} class="slidePic"/>
+          </div>
+        </Slider>
       </div>
-      <div className="footer"></div>
-    </div>
+      </div>
   );
 }
 
-export default WhatsappPage;
+export default WhatsAppPage;

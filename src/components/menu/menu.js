@@ -1,13 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import "./menu.scss"; // Importa los estilos de SCSS
 import avatar from "../../assets/images/avatar.png";
 import logo from "../../assets/images/Logos_UAM-08.png";
-import maluma from "../../assets/images/maluma.gif";
-import maluma1 from "../../assets/images/Maluma1.gif";
-import eladio from "../../assets/images/eladio.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
@@ -60,14 +54,6 @@ function MenuReact() {
     };
   }, []);
 
-  const sliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
-
   return (
     <div className="container">
       {/* Sección de iconos que se mostrará al desplazarse hacia abajo */}
@@ -77,11 +63,11 @@ function MenuReact() {
             <FontAwesomeIcon icon={faHome} />
           </a>
 
-          <a href="#products" className="iconlist">
+          <a href="#products1" className="iconlist">
             <FontAwesomeIcon icon={faMapMarkerAlt} />
           </a>
 
-          <a href="#contact" className="iconlist">
+          <a href="#contact1" className="iconlist">
             <FontAwesomeIcon icon={faBars} />
           </a>
         </div>
@@ -94,13 +80,13 @@ function MenuReact() {
         </button>
         <ul id="menu-list">
           <li>
-            <a href="#flex">Flexbox</a>
+            <a href="#flex1">Flexbox</a>
           </li>
           <li>
-            <a href="#products">Products</a>
+            <a href="#products1">Products</a>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <a href="#contact1">Contact</a>
           </li>
         </ul>
         <div className="avatar-container">
@@ -108,46 +94,13 @@ function MenuReact() {
         </div>
       </div>
 
-      <div className="content" id="flex">
-        <Slider {...sliderSettings}>
-          <div>
-            <img src={maluma} class="slidePic" />
-          </div>
-          <div>
-          <img src={maluma1} class="slidePic"/>
-          </div>
-          <div>
-          <img src={eladio} class="slidePic"/>
-          </div>
-        </Slider>
+      <div className="flex1" id="flex1">
       </div>
 
-      <div className="content" id="products">
-      <Slider {...sliderSettings}>
-          <div>
-            <img src={maluma1} class="slidePic" />
-          </div>
-          <div>
-          <img src={maluma} class="slidePic"/>
-          </div>
-          <div>
-          <img src={eladio} class="slidePic"/>
-          </div>
-        </Slider>
+      <div className="products1" id="products1">
       </div>
 
-      <div className="content" id="contact">
-      <Slider {...sliderSettings}>
-          <div>
-            <img src={eladio} class="slidePic" />
-          </div>
-          <div>
-          <img src={maluma1} class="slidePic"/>
-          </div>
-          <div>
-          <img src={maluma} class="slidePic"/>
-          </div>
-        </Slider>
+      <div className="contact1" id="contact1">
       </div>
 
       <div className="footer"></div>

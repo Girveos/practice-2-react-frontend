@@ -1,50 +1,63 @@
-import React, { useState, useRef } from 'react';
-import './cubo.scss'; // Importa los estilos de SCSS
-import youtube from '../../assets/images/youtube-168-svgrepo-com.svg'
-import facebook from '../../assets/images/facebook-svgrepo-com.svg'
-import whatsapp from '../../assets/images/whatsapp-svgrepo-com.svg'
-import { Link } from 'react-router-dom';
+import React, { useState, useRef } from "react";
+import "./cubo.scss";
+import youtube from "../../assets/images/youtube-168-svgrepo-com.svg";
+import facebook from "../../assets/images/facebook-svgrepo-com.svg";
+import whatsapp from "../../assets/images/whatsapp-svgrepo-com.svg";
+import { useNavigate } from "react-router-dom";
+
 function CubeReact() {
   const cubeRef = useRef(null);
   const optionsContainerRef = useRef(null);
-  const option1Ref = useRef(null);
-  const option2Ref = useRef(null);
-  const option3Ref = useRef(null);
-
-  /* Funcion que detiene y reactiva el movimiento del cubo */
-  let animationPaused = false;
+  const navigate = useNavigate();
+  const [animationPaused, setAnimationPaused] = useState(false);
 
   const handleCubeClick = () => {
-    console.log('Di click en el cubo');
+    console.log("Di click en el cubo");
     const cube = cubeRef.current;
     const optionsContainer = optionsContainerRef.current;
 
     if (!animationPaused) {
-      console.log('Animacion pausada');
-      cube.style.animationPlayState = 'paused';
-      optionsContainer.style.display = 'flex';
-      optionsContainer.style.flexDirection = 'column';
-      animationPaused = true;
+      console.log("Animacion pausada");
+      cube.style.animationPlayState = "paused";
+      optionsContainer.style.display = "flex";
+      optionsContainer.style.flexDirection = "column";
+      setAnimationPaused(true);
+
       setTimeout(() => {
-        cube.style.animationPlayState = 'running';
-        optionsContainer.style.display = 'none';
-        animationPaused = false;
+        cube.style.animationPlayState = "running";
+        optionsContainer.style.display = "none";
+        setAnimationPaused(false);
       }, 5000);
     } else {
-      cube.style.animationPlayState = 'running';
-      optionsContainer.style.display = 'none';
-      animationPaused = false;
+      cube.style.animationPlayState = "running";
+      optionsContainer.style.display = "none";
+      setAnimationPaused(false);
     }
   };
 
-  /* Función para ver páginas */
-  const handleOptionClick = () => {
-    const option1Element = option1Ref.current;
+  const handleOptionClick = (option) => {
+    switch (option) {
+      case "facebook":
+        navigate("/facebook");
+        break;
+      case "whatsapp":
+        navigate("/whatsapp");
+        break;
+      case "youtube":
+        navigate("/youtube");
+        break;
+      default:
+    }
   };
 
   return (
     <div className="loader">
-      <div className="cube" id="animatedCube" onClick={handleCubeClick} ref={cubeRef}>
+      <div
+        className="cube"
+        id="animatedCube"
+        onClick={handleCubeClick}
+        ref={cubeRef}
+      >
         <div className="front"></div>
         <div className="back"></div>
         <div className="top"></div>
@@ -53,9 +66,17 @@ function CubeReact() {
         <div className="left"></div>
       </div>
       <div className="optionsContainer" id="options" ref={optionsContainerRef}>
-        <div className="cube1" id="option1" onClick={() => handleOptionClick('facebook')} ref={option1Ref}>
+        <div
+          className="cube1"
+          id="option1"
+          onClick={() => handleOptionClick("facebook")}
+        >
           <div className="front">
-          <img src={facebook} className="footer__icon-img-large-whatsapp" />
+            <img
+              src={facebook}
+              className="footer__icon-img-large-whatsapp"
+              alt="Facebook"
+            />
           </div>
           <div className="back"></div>
           <div className="top"></div>
@@ -63,16 +84,17 @@ function CubeReact() {
           <div className="right"></div>
           <div className="left"></div>
         </div>
-        <div className="cube2" id="option2" onClick={() => handleOptionClick('facebook')} ref={option2Ref}>
+        <div
+          className="cube2"
+          id="option2"
+          onClick={() => handleOptionClick("whatsapp")}
+        >
           <div className="front">
-          <a
-            href="https://www.tiktok.com/"
-            rel="noreferrer"
-            target="_blank"
-            className="transition text-grey hover:hover:text-blue-500"
-          >
-          <img src={whatsapp} className="footer__icon-img-large-whatsapp" />
-        </a>
+            <img
+              src={whatsapp}
+              className="footer__icon-img-large-whatsapp"
+              alt="WhatsApp"
+            />
           </div>
           <div className="back"></div>
           <div className="top"></div>
@@ -80,16 +102,17 @@ function CubeReact() {
           <div className="right"></div>
           <div className="left"></div>
         </div>
-        <div className="cube3" id="option3" onClick={() => handleOptionClick('linkedin')} ref={option3Ref}>
+        <div
+          className="cube3"
+          id="option3"
+          onClick={() => handleOptionClick("youtube")}
+        >
           <div className="front">
-          <a
-            href="https://www.tiktok.com/"
-            rel="noreferrer"
-            target="_blank"
-            className="transition text-grey hover:hover:text-blue-500"
-          >
-          <img src={youtube} className="footer__icon-img-large-whatsapp" />
-        </a>
+            <img
+              src={youtube}
+              className="footer__icon-img-large-whatsapp"
+              alt="YouTube"
+            />
           </div>
           <div className="back"></div>
           <div className="top"></div>

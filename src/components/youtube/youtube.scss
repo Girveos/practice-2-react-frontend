@@ -1,0 +1,52 @@
+/* Estilo para el slide */
+.slick-slide {
+    img {
+      margin: auto;
+    }
+  }
+  
+  button.slick-prev {
+    left: 275px;
+    top:350px;
+    z-index: 2;
+  }
+  
+  button.slick-next {
+    right: 275px;
+    top:350px;
+    z-index: 2;
+  }
+  
+  li.slick-active {
+    > button::before {
+      color: rgb(2, 2, 2) !important;
+    }
+  }
+  
+  button.slick-prev:before,
+  button.slick-next:before {
+    font-size: 30px;
+    position: sticky;
+    color: rgb(78, 71, 71);
+  }
+  
+  div.slick-track {
+    position: relative;
+    top: 100px;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  ul.slick-dots {
+    position: absolute;
+    bottom: -125px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+  }
+  
