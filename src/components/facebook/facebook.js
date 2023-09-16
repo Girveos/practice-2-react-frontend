@@ -19,9 +19,9 @@ function FacebookPage() {
   };
 
   return (
-    <div className="container">
+    <div className="containers">
       <div className="content">
-        <Slider {...sliderSettings}>
+        <Slider {...sliderSettings} style={{ height: '100%' }}>
           <div>
           <img src={anuel} class="slidePic" />
           </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import './youtube.scss';
+//import './youtube.scss';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -19,7 +19,7 @@ function YoutubePage() {
   };
 
   return (
-    <div className="container">
+    <div className="containers">
       <div className="content">
         <Slider {...sliderSettings}>
           <div>

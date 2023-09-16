@@ -1,5 +1,5 @@
 import React from 'react';
-import './whatsapp.scss';
+//import './whatsapp.scss';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -19,7 +19,7 @@ function WhatsAppPage() {
   };
 
   return (
-    <div className="container">
+    <div className="containers">
       <div className="content">
         <Slider {...sliderSettings}>
           <div>
