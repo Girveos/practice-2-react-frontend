@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import "./menu.scss"; // Importa los estilos de SCSS
 import avatar from "../../assets/images/avatar.png";
 import logo from "../../assets/images/Frank.png";
-import cardInfo from "../../assets/images/infocard.png";
-import PQRSpic from "../../assets/images/PQRSpic.png";
-import tiempoEntrega from "../../assets/images/tiempoEntrega.png";
-import discount from "../../assets/images/discount.png";
-import premio from "../../assets/images/premio.png";
+import cardInfo from "../../assets/images/infocard.jpg";
+import PQRSpic from "../../assets/images/PQRSpic.jpg";
+import tiempoEntrega from "../../assets/images/tiempo.jpg";
+import discount from "../../assets/images/descuentos.jpg";
+import premio from "../../assets/images/regalo.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
