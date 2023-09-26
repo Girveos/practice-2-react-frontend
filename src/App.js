@@ -6,7 +6,7 @@ import FacebookPage from './components/facebook/facebook';
 import WhatsAppPage from './components/whatsapp/whatsapp';
 import YoutubePage from './components/youtube/youtube';
 import MenuReact from './components/menu/menu';
-
+import TranslucentMenu from './components/translucentMenu/translucentManu.js'
 
 function App() {
   return (
@@ -17,8 +17,9 @@ function App() {
             path="/"
             element={
               <>
-                <MenuReact />
-                <CubeReact />
+                 <MenuReact />
+                <CubeReact /> 
+                {/* <TranslucentMenu /> */}
               </>
             }
           />

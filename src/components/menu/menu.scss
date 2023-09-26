@@ -14,7 +14,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color:#031B29;
+  background-color: #031b29;
   padding: 10px 20px;
 
   ul {
@@ -98,7 +98,7 @@ body {
       z-index: 1;
     }
 
-    .slidePic{
+    .slidePic {
       width: auto;
       height: 250px;
     }
@@ -155,29 +155,81 @@ body {
 
 /* Estilo para la sección Flexbox */
 .flex1 {
-background: linear-gradient(180deg,#031B29, #4b4b4b); /* Color de fondo para Flexbox */
-color: white; /* Color del texto en la sección */
-padding: 20px; /* Espaciado interno */
-height: 620px;
+  background: linear-gradient(
+    180deg,
+    #031b29,
+    #4b4b4b
+  ); /* Color de fondo para Flexbox */
+  color: white; /* Color del texto en la sección */
+  padding: 20px; /* Espaciado interno */
+  height: 620px;
+  border-bottom: 2px solid black;
 }
 
 /* Estilo para la sección Products */
 .products1 {
-background: linear-gradient(180deg,#4b4b4b, #868585); /* Color de fondo para Products */
-color: white; /* Color del texto en la sección */
-padding: 20px; /* Espaciado interno */
-height: 620px;
+  height: auto;
+  background: linear-gradient(
+    180deg,
+    #4b4b4b,
+    #868585
+  ); /* Color de fondo para Products */
+  color: white; /* Color del texto en la sección */
+  padding: 20px; /* Espaciado interno */
+  border-bottom: 2px solid black;
+
+  .cards {
+    display: flex;
+    margin-top: 15%;
+    margin-left: 5%;
+
+    .infocard {
+      margin: 5px;
+      box-shadow: -15px 10px 10px rgba(0, 0, 0, 0.333);
+      height: fit-content;
+      .css-46bh2p-MuiCardContent-root {
+        padding: 16px;
+        background: linear-gradient(180deg, #fdfdfd, #a9a9a9);
+      }
+    }
+
+      .subclassinfo {
+        background-color: #f0f0f04f;
+        padding: 20px;
+        margin: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        flex-direction: row-reverse;
+        margin-left: 20pc;
+        margin-top: -15pc;
+      }
+
+
+    .PQRScard {
+      box-shadow: -15px 10px 10px rgba(0, 0, 0, 0.333);
+      margin: 5px;
+      height: fit-content;
+      .css-46bh2p-MuiCardContent-root {
+        padding: 16px;
+        background: linear-gradient(180deg, #fdfdfd, #a9a9a9);
+      }
+    }
+  }
 }
 
 /* Estilo para la sección Contact */
 .contact1 {
-background: linear-gradient(180deg,#868585, #c9af54); /* Color de fondo para Contact */
-color: white; /* Color del texto en la sección */
-padding: 20px; /* Espaciado interno */
-height: 620px;
+  background: linear-gradient(
+    180deg,
+    #868585,
+    #c9af54
+  ); /* Color de fondo para Contact */
+  color: white; /* Color del texto en la sección */
+  padding: 20px; /* Espaciado interno */
+  height: 620px;
+  border-bottom: 2px solid black;
 }
-
-
 
 /* Estilo para la sección de iconos */
 .icon-section {
