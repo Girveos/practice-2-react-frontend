@@ -2,33 +2,34 @@ import React, { useEffect, useState } from "react";
 import "./menu.scss"; // Importa los estilos de SCSS
 import avatar from "../../assets/images/avatar.png";
 import logo from "../../assets/images/Frank.png";
-import cardInfo from "../../assets/images/infocard.jpg";
+/* import cardInfo from "../../assets/images/infocard.jpg";
 import PQRSpic from "../../assets/images/PQRSpic.jpg";
 import tiempoEntrega from "../../assets/images/tiempo.jpg";
 import discount from "../../assets/images/descuentos.jpg";
-import premio from "../../assets/images/regalo.jpg";
+import premio from "../../assets/images/regalo.jpg"; */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
   faHome,
   faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
+ import Service from "../Services/Services"; 
 
-import Card from "@mui/material/Card";
+/* import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { CardActionArea } from "@mui/material";
+import { CardActionArea } from "@mui/material"; */
 
 function MenuReact() {
   const [showIcons, setShowIcons] = useState(false);
-  const [showAdditionalCards, setShowAdditionalCards] = useState(false);
+  /* const [showAdditionalCards, setShowAdditionalCards] = useState(false); */
 
-  const handleCardClick = () => {
-    console.log("Handle Card Click"); // Agrega esta línea para depuración
+ /*  const handleCardClick = () => {
+    console.log("Handle Card Click");
     setShowAdditionalCards(!showAdditionalCards);
   };
-  
+   */
 
   useEffect(() => {
     const handleMenuToggle = () => {
@@ -115,7 +116,8 @@ function MenuReact() {
       <div className="flex1" id="flex1"></div>
 
       <div className="products1" id="products1">
-        <div className="cards">
+      <Service></Service>
+        {/* <div className="cards">
           <div className="infocard" onClick={handleCardClick}>
             <Card sx={{ maxWidth: 345 }}>
               <CardActionArea>
@@ -203,7 +205,8 @@ function MenuReact() {
               </div>
             </>
           )}
-        </div>
+        </div> */}
+        
       </div>
       <div className="contact1" id="contact1"></div>
 
