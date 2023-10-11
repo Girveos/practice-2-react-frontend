@@ -164,11 +164,25 @@ body {
   padding: 20px; /* Espaciado interno */
   height: 620px;
   border-bottom: 2px solid black;
+
+  .slider-container {
+    .slider-main {
+      .slider-title {
+        color: black;
+        h1 {
+          display: flex;
+          justify-content: center;
+          margin: 0px;
+        }
+      }
+    }
+  }
 }
 
 /* Estilo para la sección Products */
 .products1 {
-  height: auto;
+  /* height: auto; */
+  height: 620px;
   background: linear-gradient(
     180deg,
     #4b4b4b,

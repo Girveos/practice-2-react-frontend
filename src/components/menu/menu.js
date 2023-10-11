@@ -7,6 +7,13 @@ import PQRSpic from "../../assets/images/PQRSpic.jpg";
 import tiempoEntrega from "../../assets/images/tiempo.jpg";
 import discount from "../../assets/images/descuentos.jpg";
 import premio from "../../assets/images/regalo.jpg"; */
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import don from "../../assets/images/don.gif";
+import eladio from "../../assets/images/eladio.gif";
+import emilia from "../../assets/images/emilia.gif";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
@@ -14,6 +21,7 @@ import {
   faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
  import Service from "../Services/Services"; 
+
 
 /* import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -58,7 +66,7 @@ function MenuReact() {
         setShowIcons(false);
       }
     };
-
+    
     // Agrega eventos de escucha para el menú, el redimensionamiento de la ventana y el desplazamiento
     const menuToggle = document.getElementById("menu-toggle");
     menuToggle.addEventListener("click", handleMenuToggle);
@@ -72,7 +80,13 @@ function MenuReact() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   return (
     <div className="container">
       {/* Sección de iconos que se mostrará al desplazarse hacia abajo */}
@@ -113,10 +127,28 @@ function MenuReact() {
         </div>
       </div>
 
-      <div className="flex1" id="flex1"></div>
+      <div className="flex1" id="flex1">
+        <div className="slider-container">
+          <div className="slider-main">
+            <Slider {...sliderSettings}>
+              <div>
+              <div className="slider-title"><h1 >Prueba</h1></div>
+              <img src={emilia} class="slidePic" />
+              </div>
+              <div>
+              <img src={eladio} class="slidePic"/>
+              </div>
+              <div>
+              <img src={don} class="slidePic"/>
+              </div>
+            </Slider>
+            
+          </div>
+        </div>
+      </div>
 
       <div className="products1" id="products1">
-      <Service></Service>
+      {/* <Service></Service> */}
         {/* <div className="cards">
           <div className="infocard" onClick={handleCardClick}>
             <Card sx={{ maxWidth: 345 }}>
