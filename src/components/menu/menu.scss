@@ -167,15 +167,47 @@ body {
 
   .slider-container {
     .slider-main {
-      .slider-title {
-        color: black;
-        h1 {
-          display: flex;
-          justify-content: center;
-          margin: 0px;
+      .slider-content{
+        .slider-title {
+          color: black;
+          h2 {
+            display: flex;
+            margin-left: 60px;
+            font-weight: bold;
+          }
+        }
+        .slider-subtitle {
+          color: black;          
+          margin-left: 60px;
+          margin-bottom: 10px;
+          h3 {
+            display: flex;
+            margin: 0;
+            font-weight: lighter;
+          }
         }
       }
     }
+    ul.slick-dots {
+      position: absolute;
+      bottom: -50px;
+      display: block;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      text-align: center;
+    }
+    button.slick-prev:before,
+    button.slick-next:before {
+      font-size: 30px;
+      position: sticky;
+      color: white;
+    }
+  }
+
+  .button-mas-info{
+    margin-left: 60px;
   }
 }
 
@@ -192,7 +224,7 @@ body {
   padding: 20px; /* Espaciado interno */
   border-bottom: 2px solid black;
 
-  /* .cards {
+   .cards {
     display: flex;
     margin-top: 15%;
     margin-left: 5%;
@@ -229,7 +261,7 @@ body {
         background: linear-gradient(180deg, #fdfdfd, #a9a9a9);
       }
     }
-  } */
+  } 
 }
 
 /* Estilo para la sección Contact */

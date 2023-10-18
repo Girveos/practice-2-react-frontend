@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
-import "./menu.scss"; // Importa los estilos de SCSS
+import "./menu.scss";
 import avatar from "../../assets/images/avatar.png";
 import logo from "../../assets/images/Frank.png";
-/* import cardInfo from "../../assets/images/infocard.jpg";
-import PQRSpic from "../../assets/images/PQRSpic.jpg";
-import tiempoEntrega from "../../assets/images/tiempo.jpg";
-import discount from "../../assets/images/descuentos.jpg";
-import premio from "../../assets/images/regalo.jpg"; */
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import Modal from "@mui/material/Modal";
 import don from "../../assets/images/don.gif";
 import eladio from "../../assets/images/eladio.gif";
 import emilia from "../../assets/images/emilia.gif";
+import { images } from "../../assets";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -20,8 +20,7 @@ import {
   faHome,
   faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
- import Service from "../Services/Services"; 
-
+/* import { PostsList } from "../posts"; */
 
 /* import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -29,11 +28,63 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material"; */
 
-function MenuReact() {
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 4,
+};
+
+const posts = [
+  {
+    _id: "1",
+    title: "Nuevos lanzamientos",
+    subtitle: "¡Lo último de moda!",
+    Description: "¡Explora nuestra colección de nuevos lanzamientos de zapatos y mantente a la moda con los diseños más recientes!",
+    avatar: images.post1,
+  },
+  {
+    _id: "2",
+    title: "Linea exclusiva",
+    subtitle: "¡Productos que solo encuentras aquí!",
+    Description: "¡Encuentra zapatos exclusivos y de alta calidad que te ayudarán a expresar tu estilo único.!",
+    avatar: images.post2,
+  },
+  {
+    _id: "3",
+    title: "Colaboraciones",
+    subtitle: "¡Colaboración de Adidas con BaddBunny!",
+    Description: "¡Descubre nuestra colección de zapatos nacidos de emocionantes colaboraciones con diseñadores y celebridades!",
+    avatar: images.post3,
+  },
+  {
+    _id: "4",
+    title: "Descuento del dia",
+    subtitle: "¡Referencia de producto con descuento!",
+    Description: "¡Aprovecha nuestras ofertas diarias en zapatos de alta calidad a precios sorprendentes!",
+    avatar: images.post4,
+  },
+];
+
+export const MenuReact = () => {
   const [showIcons, setShowIcons] = useState(false);
+  const [open, setOpen] = React.useState(false);
+  const [selectedPost, setSelectedPost] = useState(null);
+  const handleOpen = (post_id) => {
+    const post = posts.find((post) => post._id === post_id);
+    setSelectedPost(post);
+    setOpen(true);
+  };
+
+  const handleClose = () => setOpen(false);
   /* const [showAdditionalCards, setShowAdditionalCards] = useState(false); */
 
- /*  const handleCardClick = () => {
+  /*  const handleCardClick = () => {
     console.log("Handle Card Click");
     setShowAdditionalCards(!showAdditionalCards);
   };
@@ -66,7 +117,7 @@ function MenuReact() {
         setShowIcons(false);
       }
     };
-    
+
     // Agrega eventos de escucha para el menú, el redimensionamiento de la ventana y el desplazamiento
     const menuToggle = document.getElementById("menu-toggle");
     menuToggle.addEventListener("click", handleMenuToggle);
@@ -131,24 +182,31 @@ function MenuReact() {
         <div className="slider-container">
           <div className="slider-main">
             <Slider {...sliderSettings}>
-              <div>
-              <div className="slider-title"><h1 >Prueba</h1></div>
-              <img src={emilia} class="slidePic" />
-              </div>
-              <div>
-              <img src={eladio} class="slidePic"/>
-              </div>
-              <div>
-              <img src={don} class="slidePic"/>
-              </div>
+              {posts.length > 0 ? (
+                posts.map((post) => (
+                  <div className="slider-content">
+                    <img src={post.avatar} class="slidePic" />
+                    <div className="slider-title">
+                      <h2>{post.title}</h2>
+                    </div>
+                    <div className="slider-subtitle">
+                      <h3>{post.subtitle}</h3>
+                    </div>
+                    <Button className="button-mas-info" onClick={() => handleOpen(post._id)}>
+                      ¡Más información!
+                    </Button>
+                  </div>  
+                ))
+              ) : (
+                <p>No hay servicios</p>
+              )}
             </Slider>
-            
           </div>
         </div>
       </div>
 
       <div className="products1" id="products1">
-      {/* <Service></Service> */}
+        {/* <Service></Service> */}
         {/* <div className="cards">
           <div className="infocard" onClick={handleCardClick}>
             <Card sx={{ maxWidth: 345 }}>
@@ -238,13 +296,40 @@ function MenuReact() {
             </>
           )}
         </div> */}
-        
       </div>
       <div className="contact1" id="contact1"></div>
 
       <div className="footer"></div>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          {selectedPost && (
+            <>
+              {console.log(selectedPost)}
+              <img
+                src={selectedPost.avatar}
+                alt={selectedPost.title}
+                style={{ maxWidth: "100%", height: "auto" }}
+              />
+              <Typography id="modal-modal-title" variant="h6" component="h2">
+                {selectedPost.title}
+              </Typography>
+              <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                {selectedPost.subtitle}
+              </Typography>
+              <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                {selectedPost.Description}
+              </Typography>
+            </>
+          )}
+        </Box>
+      </Modal>
     </div>
   );
-}
+};
 
 export default MenuReact;

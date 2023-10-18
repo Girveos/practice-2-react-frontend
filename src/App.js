@@ -5,7 +5,7 @@ import CubeReact from './components/cube/cubo.js';
 import FacebookPage from './components/facebook/facebook';
 import WhatsAppPage from './components/whatsapp/whatsapp';
 import YoutubePage from './components/youtube/youtube';
-import MenuReact from './components/menu/menu';
+import MenuReact from './components/menu/MenuReact';
 import TranslucentMenu from './components/translucentMenu/translucentManu.js'
 
 function App() {
