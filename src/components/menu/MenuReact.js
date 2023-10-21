@@ -13,8 +13,8 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import { images } from "../../assets";
-import ShoppingCar from "../shoppingCar/shoppingCar"
-import Favorites from "../favorites/favorites"
+import ShoppingCar from "../shoppingCar/ShoppingCar"
+import Favorites from "../favorites/Favorites"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,

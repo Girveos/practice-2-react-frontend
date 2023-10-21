@@ -1,0 +1,31 @@
+.title-favorites{
+    margin-left: 50px;
+}
+
+.shopping-favorites-card {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    gap: 16px; 
+    margin-left: 50px;
+    margin-bottom: 10px;
+
+    .card-image-favorites {
+        flex: 0 0 auto; 
+        width: 200px; 
+    }
+
+    .card-content-favorites {
+        flex: 1; 
+        background: linear-gradient(45deg, white, #ececec);
+    }
+    .css-46bh2p-MuiCardContent-root {
+        padding: 25px;
+    }
+
+    
+}
+
+.no-likes-message{
+    margin-left: 50px;
+}
