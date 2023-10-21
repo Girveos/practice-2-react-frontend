@@ -174,6 +174,7 @@ body {
             margin-left: 60px;
             font-weight: bold;
             font-variant: all-petite-caps;
+            text-align: center;
           }
         }
         .slider-subtitle {
@@ -277,7 +278,7 @@ body {
 .products1 {
   /* height: auto; */
   display: flex;
-  height: 620px;
+  height: auto;
   background: linear-gradient(
     180deg,
     #4b4b4b,
@@ -334,7 +335,7 @@ body {
   ); /* Color de fondo para Contact */
   color: white; /* Color del texto en la sección */
   padding: 20px; /* Espaciado interno */
-  height: 620px;
+  height: auto;
   display: flex;
 }
 
