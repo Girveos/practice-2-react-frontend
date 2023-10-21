@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from "react";
+import Fab from '@mui/material/Fab';
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import "./menu.scss";
 import avatar from "../../assets/images/avatar.png";
 import logo from "../../assets/images/Frank.png";
@@ -9,11 +12,9 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
-import don from "../../assets/images/don.gif";
-import eladio from "../../assets/images/eladio.gif";
-import emilia from "../../assets/images/emilia.gif";
 import { images } from "../../assets";
-
+import ShoppingCar from "../shoppingCar/shoppingCar"
+import Favorites from "../favorites/favorites"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
@@ -80,6 +81,34 @@ export const MenuReact = () => {
     setSelectedPost(post);
     setOpen(true);
   };
+
+  const [cartItems, setCartItems] = useState([]);
+
+  const addToCart = (product) => {
+    setCartItems((prevCartItems) => {
+      const exists = prevCartItems.some((item) => item._id === product._id);
+      if (!exists) {
+        const updatedCart = [...prevCartItems, product];
+        console.log("Carrito de compras:", updatedCart);
+        return updatedCart;
+      }
+      return prevCartItems;
+    });
+  };
+
+  const [likedProducts, setLikedProducts] = useState([]);
+  const addLikedProduct = (product) => {
+    setLikedProducts((prevLikedProducts) => {
+      const exists = prevLikedProducts.some((item) => item._id === product._id);
+      if (!exists) {
+        const updatedLikedProducts = [...prevLikedProducts, product];
+        console.log("Productos que les gustan:", updatedLikedProducts);
+        return updatedLikedProducts;
+      }
+      return prevLikedProducts;
+    });
+  };
+  
 
   const handleClose = () => setOpen(false);
   /* const [showAdditionalCards, setShowAdditionalCards] = useState(false); */
@@ -206,6 +235,7 @@ export const MenuReact = () => {
       </div>
 
       <div className="products1" id="products1">
+        <Favorites favoritesItems={likedProducts} />
         {/* <Service></Service> */}
         {/* <div className="cards">
           <div className="infocard" onClick={handleCardClick}>
@@ -297,7 +327,9 @@ export const MenuReact = () => {
           )}
         </div> */}
       </div>
-      <div className="contact1" id="contact1"></div>
+      <div className="contact1" id="contact1">
+        <ShoppingCar cartItems={cartItems} />
+      </div>
 
       <div className="footer"></div>
       <Modal
@@ -309,21 +341,40 @@ export const MenuReact = () => {
         <Box sx={style}>
           {selectedPost && (
             <>
+            <Typography id="modal-modal-title" variant="h6" component="h2" className="title-modal">
+                {selectedPost.title}
+              </Typography>
+              <Typography id="modal-modal-description" sx={{ mt: 2 }} className="title-modal">
+                {selectedPost.subtitle}
+              </Typography>
               {console.log(selectedPost)}
               <img
                 src={selectedPost.avatar}
                 alt={selectedPost.title}
                 style={{ maxWidth: "100%", height: "auto" }}
               />
-              <Typography id="modal-modal-title" variant="h6" component="h2">
-                {selectedPost.title}
-              </Typography>
-              <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                {selectedPost.subtitle}
-              </Typography>
+              
               <Typography id="modal-modal-description" sx={{ mt: 2 }}>
                 {selectedPost.Description}
               </Typography>
+              <div className="button-fav-group">
+                            <Fab
+                              className="fab-button"
+                              color="primary"
+                              aria-label="Favorite icon"
+                              onClick={() => addLikedProduct (selectedPost)}
+                            >
+                              <FavoriteIcon />
+                            </Fab>
+                            <Fab
+                              className="shop-button"
+                              color="seconday"
+                              aria-label="Favorite icon"
+                              onClick={() => addToCart(selectedPost)}
+                            >
+                              <AddShoppingCartIcon />
+                            </Fab>
+                          </div>
             </>
           )}
         </Box>
