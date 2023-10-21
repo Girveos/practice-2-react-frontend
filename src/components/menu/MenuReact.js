@@ -61,14 +61,14 @@ const posts = [
     title: "Colaboraciones",
     subtitle: "¡Colaboración de Adidas con BaddBunny!",
     Description: "¡Descubre nuestra colección de zapatos nacidos de emocionantes colaboraciones con diseñadores y celebridades!",
-    avatar: images.post3,
+    avatar: images.post4,
   },
   {
     _id: "4",
     title: "Descuento del dia",
     subtitle: "¡Referencia de producto con descuento!",
     Description: "¡Aprovecha nuestras ofertas diarias en zapatos de alta calidad a precios sorprendentes!",
-    avatar: images.post4,
+    avatar: images.post3,
   },
 ];
 
@@ -333,12 +333,13 @@ export const MenuReact = () => {
 
       <div className="footer"></div>
       <Modal
+        className="modal-style"
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <Box className="box-style">
           {selectedPost && (
             <>
             <Typography id="modal-modal-title" variant="h6" component="h2" className="title-modal">

@@ -23,11 +23,11 @@ function CubeReact() {
       optionsContainer.style.flexDirection = "column";
       setAnimationPaused(true);
 
-      setTimeout(() => {
+      /* setTimeout(() => {
         cube.style.animationPlayState = "running";
         optionsContainer.style.display = "none";
         setAnimationPaused(false);
-      }, 5000);
+      }, 5000); */
     } else {
       cube.style.animationPlayState = "running";
       optionsContainer.style.display = "none";
