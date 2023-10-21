@@ -81,7 +81,7 @@ body {
     }
   }
 
-  @media (max-width: 530px) {
+  @media (max-width: 950px) {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -160,30 +160,31 @@ body {
     #031b29,
     #4b4b4b
   ); /* Color de fondo para Flexbox */
-  color: white; /* Color del texto en la sección */
   padding: 20px; /* Espaciado interno */
-  height: 620px;
-  border-bottom: 2px solid black;
+  height: 665px;
+  
 
   .slider-container {
     .slider-main {
-      .slider-content{
+      .slider-content {
         .slider-title {
           color: black;
           h2 {
             display: flex;
             margin-left: 60px;
             font-weight: bold;
+            font-variant: all-petite-caps;
           }
         }
         .slider-subtitle {
-          color: black;          
+          color: black;
           margin-left: 60px;
           margin-bottom: 10px;
           h3 {
             display: flex;
             margin: 0;
             font-weight: lighter;
+            font-variant: all-petite-caps;
           }
         }
       }
@@ -201,12 +202,73 @@ body {
     button.slick-prev:before,
     button.slick-next:before {
       font-size: 30px;
-      position: sticky;
+      position: fixed;
       color: white;
+      display: block;
+    }
+    button.slick-prev{
+      left: 15%;
+    }
+    button.slick-next{
+      right: 15%;
+    }
+    @media (max-width: 1230px){
+      button.slick-prev{
+        left: 5%;
+      }
+      button.slick-next{
+        right: 6%;
+      }
+    }
+  }
+  @media (max-width: 950px) {
+    .slider-container {
+      .slider-main {
+        .slider-content {
+          .slidePic {
+            display: inline-table;
+            height: auto;
+            width: -webkit-fill-available;
+            margin: 5%;
+          }
+          .slider-title {
+            color: black;
+            h2 {
+              justify-content: center;
+              display: flex;
+              margin-left: 18px;
+              margin-top: -10px;
+              font-weight: bold;
+              font-variant: all-petite-caps;
+            }
+          }
+          .slider-subtitle {
+            color: black;
+            margin-left: 60px;
+            margin-bottom: 10px;
+            h3 {
+              justify-content: center;
+              display: flex;
+              margin: 0;
+              font-weight: lighter;
+              font-variant: all-petite-caps;
+              text-align: center;
+              margin-left: -30px;
+            }
+          }
+        }
+      }
+      ul.slick-dots {
+        visibility: hidden;
+      }
+      button.slick-prev:before,
+      button.slick-next:before {
+        display: none;
+      }
     }
   }
 
-  .button-mas-info{
+  .button-mas-info {
     margin-left: 60px;
   }
 }
@@ -222,9 +284,8 @@ body {
   ); /* Color de fondo para Products */
   color: white; /* Color del texto en la sección */
   padding: 20px; /* Espaciado interno */
-  border-bottom: 2px solid black;
 
-   .cards {
+  .cards {
     display: flex;
     margin-top: 15%;
     margin-left: 5%;
@@ -239,18 +300,17 @@ body {
       }
     }
 
-      .subclassinfo {
-        background-color: #f0f0f04f;
-        padding: 20px;
-        margin: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        flex-direction: row-reverse;
-        margin-left: 20pc;
-        margin-top: -15pc;
-      }
-
+    .subclassinfo {
+      background-color: #f0f0f04f;
+      padding: 20px;
+      margin: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      flex-direction: row-reverse;
+      margin-left: 20pc;
+      margin-top: -15pc;
+    }
 
     .PQRScard {
       box-shadow: -15px 10px 10px rgba(0, 0, 0, 0.333);
@@ -261,7 +321,7 @@ body {
         background: linear-gradient(180deg, #fdfdfd, #a9a9a9);
       }
     }
-  } 
+  }
 }
 
 /* Estilo para la sección Contact */
@@ -274,7 +334,6 @@ body {
   color: white; /* Color del texto en la sección */
   padding: 20px; /* Espaciado interno */
   height: 620px;
-  border-bottom: 2px solid black;
 }
 
 /* Estilo para la sección de iconos */
@@ -312,6 +371,44 @@ body {
   .iconlist {
     :active {
       color: black;
+    }
+  }
+}
+
+.modal-style {
+  background-color: #00000057;
+  .box-style {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 550px;
+    background-color: white; // Asumiendo que estás utilizando una variable de color llamada $theme.palette.background.paper
+    border: 3px solid #000;
+    box-shadow: 24px; // Puedes ajustar el valor del desenfoque según tus necesidades
+    padding: 4px; // Aquí asumí que te refieres a un padding de 4 píxeles
+
+    @media (max-width: 950px) {
+      width: 74%;
+      height: auto;
+    }
+
+    .title-modal {
+      display: flex;
+      justify-content: center;
+    }
+    .button-fav-group {
+      display: flex;
+      justify-content: end;
+      .fab-button {
+        margin: 5px;
+        background-color: rgb(204, 57, 57);
+      }
+      .shop-button {
+        margin: 5px;
+        background-color: rgb(105, 105, 212);
+      }
     }
   }
 }

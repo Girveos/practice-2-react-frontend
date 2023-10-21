@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from "react";
+import Fab from '@mui/material/Fab';
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import "./menu.scss";
 import avatar from "../../assets/images/avatar.png";
 import logo from "../../assets/images/Frank.png";
@@ -60,14 +63,14 @@ const posts = [
     title: "Colaboraciones",
     subtitle: "¡Colaboración de Adidas con BaddBunny!",
     Description: "¡Descubre nuestra colección de zapatos nacidos de emocionantes colaboraciones con diseñadores y celebridades!",
-    avatar: images.post3,
+    avatar: images.post4,
   },
   {
     _id: "4",
     title: "Descuento del dia",
     subtitle: "¡Referencia de producto con descuento!",
     Description: "¡Aprovecha nuestras ofertas diarias en zapatos de alta calidad a precios sorprendentes!",
-    avatar: images.post4,
+    avatar: images.post3,
   },
 ];
 
@@ -301,29 +304,47 @@ export const MenuReact = () => {
 
       <div className="footer"></div>
       <Modal
+        className="modal-style"
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <Box className="box-style">
           {selectedPost && (
             <>
+            <Typography id="modal-modal-title" variant="h6" component="h2" className="title-modal">
+                {selectedPost.title}
+              </Typography>
+              <Typography id="modal-modal-description" sx={{ mt: 2 }} className="title-modal">
+                {selectedPost.subtitle}
+              </Typography>
               {console.log(selectedPost)}
               <img
                 src={selectedPost.avatar}
                 alt={selectedPost.title}
                 style={{ maxWidth: "100%", height: "auto" }}
               />
-              <Typography id="modal-modal-title" variant="h6" component="h2">
-                {selectedPost.title}
-              </Typography>
-              <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                {selectedPost.subtitle}
-              </Typography>
+              
               <Typography id="modal-modal-description" sx={{ mt: 2 }}>
                 {selectedPost.Description}
               </Typography>
+              <div className="button-fav-group">
+                            <Fab
+                              className="fab-button"
+                              color="primary"
+                              aria-label="Favorite icon"
+                            >
+                              <FavoriteIcon />
+                            </Fab>
+                            <Fab
+                              className="shop-button"
+                              color="seconday"
+                              aria-label="Favorite icon"
+                            >
+                              <AddShoppingCartIcon />
+                            </Fab>
+                          </div>
             </>
           )}
         </Box>
