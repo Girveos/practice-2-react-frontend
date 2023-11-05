@@ -6,6 +6,7 @@ import FacebookPage from './components/facebook/facebook';
 import WhatsAppPage from './components/whatsapp/whatsapp';
 import YoutubePage from './components/youtube/youtube';
 import MenuReact from './components/menu/MenuReact';
+import TermsAndConditionsPage from './components/terms/terms'
 import TranslucentMenu from './components/translucentMenu/translucentManu.js'
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path="/facebook" element={<FacebookPage />} />
           <Route path="/whatsapp" element={<WhatsAppPage />} />
           <Route path="/youtube" element={<YoutubePage />} />
+          <Route path="/terms" element={<TermsAndConditionsPage />} />
           {/* Otras rutas aquí */}
         </Routes>
       </div>

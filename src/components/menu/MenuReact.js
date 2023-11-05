@@ -83,7 +83,6 @@ export const MenuReact = () => {
   };
 
   const [cartItems, setCartItems] = useState([]);
-
   const addToCart = (product) => {
     setCartItems((prevCartItems) => {
       const exists = prevCartItems.some((item) => item._id === product._id);
@@ -331,7 +330,9 @@ export const MenuReact = () => {
         <ShoppingCar cartItems={cartItems} />
       </div>
 
-      <div className="footer"></div>
+      <div className="footer">
+        <h1>gey</h1>
+      </div>
       <Modal
         className="modal-style"
         open={open}
