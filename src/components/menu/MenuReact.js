@@ -14,6 +14,7 @@ import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import { images } from "../../assets";
 import ShoppingCar from "../shoppingCar/ShoppingCar"
+import Footer from "../footer/Footer";
 import Favorites from "../favorites/Favorites"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -236,102 +237,13 @@ export const MenuReact = () => {
 
       <div className="products1" id="products1">
         <Favorites favoritesItems={likedProducts} />
-        {/* <Service></Service> */}
-        {/* <div className="cards">
-          <div className="infocard" onClick={handleCardClick}>
-            <Card sx={{ maxWidth: 345 }}>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height="140"
-                  image={cardInfo}
-                  alt="carry"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    Información
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Aquí podrás encontrar Información vital que deberas tener en
-                    cuenta a la hora de adquirir nuestros productos sobre
-                    derechos y deberes con los que cuentas.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          </div>
-          <div className="PQRScard">
-            <Card sx={{ maxWidth: 340 }}>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height="140"
-                  image={PQRSpic}
-                  alt="shoe"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    Foro de Preguntas
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Puedes realizar cualquier pregunta respecto a tú compra,
-                    tiempos de espera, precio y/o cualquier otra inquietud que
-                    creas que te podemos responder.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          </div>
-          {showAdditionalCards && (
-            <>
-              <div className="subclassinfo">
-              <Card sx={{ maxWidth: 340 }}>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height="140"
-                  image={tiempoEntrega}
-                  alt="shoe"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                   Tiempos de entrega
-                  </Typography>
-                </CardContent>
-                <CardMedia
-                  component="img"
-                  height="140"
-                  image={discount}
-                  alt="shoe"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                   Descuentos
-                  </Typography>
-                </CardContent>
-                <CardMedia
-                  component="img"
-                  height="140"
-                  image={premio}
-                  alt="shoe"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                   Premios
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-              </div>
-            </>
-          )}
-        </div> */}
       </div>
       <div className="contact1" id="contact1">
         <ShoppingCar cartItems={cartItems} />
       </div>
-
-      <div className="footer"></div>
+      <div className="footer">
+      <Footer/>
+      </div>
       <Modal
         className="modal-style"
         open={open}

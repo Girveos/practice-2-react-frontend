@@ -9,7 +9,7 @@
     transform-style: preserve-3d;
     animation: spin 8s infinite linear;
     position: fixed;
-    bottom: 50px;
+    bottom: 175px;
     right: 50px;
     & div {
       position: absolute;
@@ -56,7 +56,7 @@
       transform-style: preserve-3d;
       transform: rotateX(-20deg) rotateY(-20deg) scaleX(0.5) scaleY(0.5) scaleZ(0.5);
       position: fixed;
-      bottom: 215px; /*250*/
+      bottom: 300px; /*250*/
       right: 50px;  /*100*/
       & div {
         position: absolute;
@@ -96,7 +96,7 @@
       transform-style: preserve-3d;
       transform: rotateX(-20deg) rotateY(-20deg) scaleX(0.5) scaleY(0.5) scaleZ(0.5);
       position: fixed;
-      bottom: 315px; /*350*/
+      bottom: 375px; /*350*/
       right: 50px;  /*100*/
       & div {
         position: absolute;
@@ -136,7 +136,7 @@
       transform-style: preserve-3d;
       transform: rotateX(-20deg) rotateY(-20deg) scaleX(0.5) scaleY(0.5) scaleZ(0.5);
       position: fixed;
-      bottom: 415px; /*450*/
+      bottom: 460px; /*450*/
       right: 50px;  /*100*/
       & div {
         position: absolute;
@@ -193,7 +193,7 @@
         transform-style: preserve-3d;
         animation: spin 8s infinite linear;
         position: fixed;
-        bottom: 50px;
+        bottom: 165px;
         right: 50px;
         & div {
           position: absolute;
@@ -240,7 +240,7 @@
           transform-style: preserve-3d;
           transform: rotateX(-20deg) rotateY(-20deg) scaleX(0.5) scaleY(0.5) scaleZ(0.5);
           position: fixed;
-          bottom: 135px;
+          bottom: 235px;
           right: 45px;
           & div {
             position: absolute;
@@ -283,7 +283,7 @@
           transform-style: preserve-3d;
           transform: rotateX(-20deg) rotateY(-20deg) scaleX(0.5) scaleY(0.5) scaleZ(0.5);
           position: fixed;
-          bottom: 175px;
+          bottom: 275px;
           right: 45px;
           & div {
             position: absolute;
@@ -326,7 +326,7 @@
           transform-style: preserve-3d;
           transform: rotateX(-20deg) rotateY(-20deg) scaleX(0.5) scaleY(0.5) scaleZ(0.5);
           position: fixed;
-          bottom: 215px;
+          bottom: 315px;
           right: 45px;
           & div {
             position: absolute;
