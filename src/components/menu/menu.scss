@@ -30,7 +30,8 @@ body {
         text-decoration: none;
         font-size: 17px;
         font-weight: 400;
-        color: white;
+        font-variant: all-petite-caps;
+        color: rgb(106, 106, 107);
         padding: 5px 10px;
         transition: background-color 0.3s;
 
@@ -50,6 +51,7 @@ body {
     max-width: 70px;
     height: auto;
     margin-right: 3%;
+    
   }
 
   .menu-toggle {
@@ -96,6 +98,7 @@ body {
       background-color: rgb(143, 141, 134);
       padding: 10px 20px;
       z-index: 1;
+      width: 89%;
     }
 
     .slidePic {
@@ -168,6 +171,7 @@ body {
       .slider-content {
         .slider-title {
           color: black;
+          
           h2 {
             display: flex;
             margin-left: 60px;
@@ -230,6 +234,7 @@ body {
             height: auto;
             width: -webkit-fill-available;
             margin: 5%;
+          box-shadow: -15px 10px 10px rgba(0, 0, 0, 0.333);
           }
           .slider-title {
             color: black;
@@ -276,7 +281,7 @@ body {
 /* Estilo para la sección Products */
 .products1 {
   /* height: auto; */
-  display: flex;
+  display: flow-root;
   height: auto;
   background: linear-gradient(
     180deg,
@@ -330,12 +335,13 @@ body {
   background: linear-gradient(
     180deg,
     #868585,
-    #c9af54
+    #95938a
   ); /* Color de fondo para Contact */
   color: white; /* Color del texto en la sección */
   padding: 20px; /* Espaciado interno */
+  padding-bottom: 10%;
   height: auto;
-  display: flex;
+  display: flow-root;
 }
 
 /* Estilo para la sección de iconos */
