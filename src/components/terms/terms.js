@@ -7,6 +7,7 @@ function TermsAndConditionsPage() {
     <p>Última actualización: 01 de noviembre de 2023</p>
     <p>Esta Política de Privacidad describe nuestras políticas y procedimientos sobre la recopilación, uso y divulgación de su información cuando utiliza el Servicio y le informa acerca de sus derechos de privacidad y cómo la ley lo protege.</p>
     <p>Utilizamos sus datos personales para proporcionar y mejorar el Servicio. Al utilizar el Servicio, usted acepta la recopilación y el uso de información de acuerdo con esta Política de Privacidad.</p>
+    <p>De conformidad con lo dispuesto en la Ley 1581 de 2012 y el Decreto 1377 de 2013, declaro que entregué de forma libre y voluntaria mis Datos Personales y, con mi aceptación y/o firma, autorizo a Full House Shoes para que, como Responsable, realice la recolección y tratamiento de mis datos personales para las finalidades indicadas más adelante y de conformidad con la Política de tratamiento de la información de Full House Shoes, la cual está disponible en la página web www.fullhouseshoes.com/terms/</p>
     `,active: true },
     { id: 2, title: 'Definiciones', content: `<h3>Definiciones</h3>
     <p>Para los fines de esta Política de Privacidad:</p>
@@ -178,7 +179,8 @@ function TermsAndConditionsPage() {
     `,active: false },
     { id: 7, title: 'Contáctanos', content: `<p>Si tienes alguna pregunta sobre esta Política de Privacidad, puedes contactarnos:</p>
     <ul>
-    <li>Visitando esta página en nuestro sitio web: <a href="http://www.fullhouse.com/terms" rel="external nofollow noopener" target="_blank">http://www.fullhouse.com/terms</a></li>
+    <li>Visitando esta página en nuestro sitio web: <a href="https://www.fullhouse.com/terms" rel="external nofollow noopener" target="_blank">http://www.fullhouse.com/terms</a></li>
+    <li>Escribiendo al correo servicioalcliente@fullhouse.com</li>
     </ul>`,active: false  },
   ];
 
@@ -203,7 +205,7 @@ function TermsAndConditionsPage() {
             onClick={() => handleSectionClick(section)}
             className={section.active ? 'active' : ''}
           >
-            {section.title}
+            <p>{section.title}</p>
           </button>
         ))}
       </div>

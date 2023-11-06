@@ -22,13 +22,8 @@ import {
   faHome,
   faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
-/* import { PostsList } from "../posts"; */
+import { useNavigate } from "react-router-dom";
 
-/* import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import { CardActionArea } from "@mui/material"; */
 
 const style = {
   position: "absolute",
@@ -74,6 +69,7 @@ const posts = [
 ];
 
 export const MenuReact = () => {
+  const navigate = useNavigate();
   const [showIcons, setShowIcons] = useState(false);
   const [open, setOpen] = React.useState(false);
   const [selectedPost, setSelectedPost] = useState(null);
@@ -202,9 +198,7 @@ export const MenuReact = () => {
             <a href="#contact1">Contact</a>
           </li>
         </ul>
-        <div className="avatar-container">
-          <img src={avatar} className="avatar" alt="Foto de perfil" />
-        </div>
+        <Button variant="contained" className="button-login" onClick={() => navigate("/login")}>Iniciar sesión</Button>
       </div>
 
       <div className="flex1" id="flex1">

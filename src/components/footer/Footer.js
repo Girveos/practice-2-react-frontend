@@ -6,8 +6,10 @@ import locationicon from '../../assets/SVG/location-svgrepo-com.png'
 import IGicon from '../../assets/SVG/instagram-svgrepo-com.png'
 import FCicon from '../../assets/SVG/facebook-svgrepo-com.png'
 import WPicon from '../../assets/SVG/whatsapp-svgrepo-com.png'
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -43,7 +45,7 @@ const Footer = () => {
           <Grid item xs={12} sm={12} md={4}>
             <div className="privacy-container">
               <h2>Política y privacidad de datos</h2>
-              <Button variant="contained" className="button-politics">¡Conozca nuestras políticas!</Button>
+              <Button variant="contained" className="button-politics" onClick={() => navigate("/terms")}>¡Conozca nuestras políticas!</Button>
             </div>
           </Grid>
         </Grid>

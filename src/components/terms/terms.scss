@@ -1,10 +1,24 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(180deg,#031b29,#4b4b4b); 
-  }
+    background: linear-gradient(180deg,#031b29,#031b29); 
+}
 
+h2 { 
+    color: #ffffff; 
+}
+h3{ 
+    color: #ffffff; 
+}
+h4{ 
+    color: #ffffff; 
+}
+p{
+    color: #ffffff; 
+}
+li{
+    color: #ffffff; 
+}
 .section-buttons {
     display: flex;
     gap: 10px;
@@ -24,6 +38,9 @@ body {
         &.active {
             background-color: grey ; 
         }
+    }
+    h2{
+        color: white;
     }
 }
 
